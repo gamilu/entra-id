@@ -1,0 +1,19 @@
+[MESSAGES CONTROL]
+# Disabled checks reflect a deliberate documentation style for this repo
+# series, not laziness: intent is documented in module-level docstrings
+# and inline comments (the "why", not restating the "what" a well-named
+# method already says), rather than repeated one-line docstrings on every
+# terse getter/setter-shaped method. Auth flows use explicit named
+# parameters (client_id, client_secret, refresh_token, ...) rather than a
+# kwargs blob or config object, since that reads clearer for a reference
+# implementation meant to be read top-to-bottom - pylint's default
+# max-args=5 doesn't fit that choice.
+disable=
+    missing-module-docstring,
+    missing-class-docstring,
+    missing-function-docstring,
+    too-many-arguments,
+    too-many-positional-arguments,
+
+[FORMAT]
+max-line-length=100
